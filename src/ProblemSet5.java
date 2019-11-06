@@ -25,8 +25,8 @@ public class ProblemSet5 {
 
       System.out.println(ps.surroundMe("cde", "abfg"));
       System.out.println(ps.endsMeet("abcdefg", 2));
-      //ps.middleMan();
-      //ps.iscentered();
+      System.out.println(ps.middleMan("abcdefg"));
+      System.out.println(ps.isCentered("abcdefg", "cde"));
       //ps.countMe();
       //ps.triplets();
       //System.out.println(ps.addMe("123 abc 123"));
@@ -80,9 +80,12 @@ public class ProblemSet5 {
      * Given a string, return a new string using the middle three characters of text.
      */
 
-  /*  public String middleMan(String text) {
-
- }*/
+    public String middleMan(String text) {
+      if (text == null || text.length() <= 2 || text.length() % 2 == 0){
+        return text;
+      }
+    return text;
+ }
 
     /*
      * Exercise 4.
@@ -91,9 +94,11 @@ public class ProblemSet5 {
      * three characters of text.
      */
 
-/*    public boolean isCentered(String text, String target) {
+    public boolean isCentered(String text, String target) {
+      if (text == null || target == null || target.length() != 3 || text.length() <= 2 || text.length() % 2 == 0){
 
-  }*/
+      }
+  }
 
     /*
      * Exercise 5.
@@ -101,9 +106,11 @@ public class ProblemSet5 {
      * Given a string and a character, compute the number of words that end in suffix.
      */
 
-  /*  public int countMe(String text, char suffix) {
-
-   }*/
+    public int countMe(String text, char suffix) {
+      if (text == null || Character.isAlphabetic(suffix)){
+        return -1;
+      }
+   }
 
     /*
      * Exercise 6.
@@ -111,33 +118,36 @@ public class ProblemSet5 {
      * Given a string, compute the number of triplets in text.
      */
 
-/*    public int triplets(String text) {
-
-   }*/
+    public int triplets(String text) {
+      if (text == null){
+        return -1;
+   }
+ }
 
     /*
      * Exercise 7.
      *
      * Given a string, compute the sum of the digits in text.
      */
-/*
+
      public long addMe(String text) {
        if (text == null){
          return -1;
        }
     }
-*/
+
     /*
      * Exercise 8.
      *
      * Given a string, compute the length of the longest sequence.
      */
 
-/*    public long sequence(String text) {
+    public long sequence(String text) {
+      if (text == null){
+        return -1;
+      }
 
-
-
-   }*/
+   }
 
     /*
      * Exercise 9.
@@ -146,17 +156,23 @@ public class ProblemSet5 {
      * characters of a and b.
      */
 
-  /*  public String intertwine(String a, String b) {
+    public String intertwine(String a, String b) {
+      if ( a == null || b == null){
+        return null;
+      }
 
    }
-*/
+
     /*
      * Exercise 10.
      *
      * Given a string, determine whether or not it is a palindrome.
      */
 
-/*    public boolean isPalindrome(String text) {
-
-   }*/
+    public boolean isPalindrome(String text) {
+      if (text == null){
+         boolean isPalindrome = false;
+         return isPalindrome;
+      }
+   }
 }
