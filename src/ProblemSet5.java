@@ -28,10 +28,10 @@ public class ProblemSet5 {
       //Working//System.out.println(ps.middleMan("abcdefg"));
       //Working//System.out.println(ps.isCentered("abcdefg", "cde"));
       //Systyem.out.println(ps.countMe());
-      /*In Progress*///System.out.println(ps.triplets("aaabbbccc"));
+      //System.out.println(ps.triplets("aaabbbccc"));
       //System.out.println(ps.addMe("123 abc 123"));
       //System.out.println(ps.sequence());
-      //System.out.println(ps.intertwine());
+      //Working//System.out.println(ps.intertwine("abc", "12345"));
       //Working//System.out.println(ps.isPalindrome("racecar"));
 
     }
@@ -183,7 +183,17 @@ public class ProblemSet5 {
       if ( a == null || b == null){
         return null;
       }
- return a;
+
+      StringBuilder intertwined = new StringBuilder();
+      for (int i = 0; i < a.length() || i < b.length(); i++){
+        if(i < a.length()){
+          intertwined.append(a.charAt(i));
+        }
+        if(i < b.length()){
+          intertwined.append(b.charAt(i));
+        }
+      }
+      return intertwined.toString();
    }
 
     /*
@@ -210,8 +220,6 @@ public class ProblemSet5 {
            if (text.equals(reverse)) {
                    isPalindrome = true;
      }
-
      return isPalindrome;
-
    }
 }
