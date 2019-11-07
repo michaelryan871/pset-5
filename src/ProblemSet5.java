@@ -23,12 +23,12 @@ public class ProblemSet5 {
 
       // comment out or uncomment as needed
 
-      System.out.println(ps.surroundMe("cde", "abfg"));
-      System.out.println(ps.endsMeet("abcdefg", 2));
-      System.out.println(ps.middleMan("abcdefg"));
-      System.out.println(ps.isCentered("abcdefg", "cde"));
+      //Working//System.out.println(ps.surroundMe("cde", "abfg"));
+      //Working//System.out.println(ps.endsMeet("abcdefg", 2));
+      //Working//System.out.println(ps.middleMan("abcdefg"));
+      //Working//System.out.println(ps.isCentered("abcdefg", "cde"));
       //ps.countMe();
-      //ps.triplets();
+      /*In Progress*/System.out.println(ps.triplets(aaabbbccc));
       //System.out.println(ps.addMe("123 abc 123"));
       //ps.sequence();
       //ps.intertwine();
@@ -84,7 +84,9 @@ public class ProblemSet5 {
       if (text == null || text.length() <= 2 || text.length() % 2 == 0){
         return text;
       }
-    return text;
+
+
+      return text;
  }
 
     /*
@@ -96,8 +98,22 @@ public class ProblemSet5 {
 
     public boolean isCentered(String text, String target) {
       if (text == null || target == null || target.length() != 3 || text.length() <= 2 || text.length() % 2 == 0){
-
+        boolean isCentered = false;
+        return isCentered;
       }
+
+
+      int stringLength = text.length();
+      String middleText = text.substring(stringLength/2 - 1, stringLength/2 + 2);
+
+    if (middleText.equals(target)){
+      boolean isCentered = true;
+      return isCentered;
+    } else {
+      boolean isCentered = false;
+      return isCentered;
+    }
+
   }
 
     /*
@@ -110,6 +126,7 @@ public class ProblemSet5 {
       if (text == null || Character.isAlphabetic(suffix)){
         return -1;
       }
+      return -1;
    }
 
     /*
@@ -122,6 +139,9 @@ public class ProblemSet5 {
       if (text == null){
         return -1;
    }
+
+
+   return -1;
  }
 
     /*
@@ -134,6 +154,7 @@ public class ProblemSet5 {
        if (text == null){
          return -1;
        }
+       return -1;
     }
 
     /*
@@ -146,7 +167,7 @@ public class ProblemSet5 {
       if (text == null){
         return -1;
       }
-
+      return -1;
    }
 
     /*
@@ -160,7 +181,7 @@ public class ProblemSet5 {
       if ( a == null || b == null){
         return null;
       }
-
+ return a;
    }
 
     /*
@@ -174,5 +195,7 @@ public class ProblemSet5 {
          boolean isPalindrome = false;
          return isPalindrome;
       }
+      boolean isPalindrome = true;
+      return isPalindrome;
    }
 }
