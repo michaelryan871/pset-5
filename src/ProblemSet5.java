@@ -27,7 +27,7 @@ public class ProblemSet5 {
       //Working//System.out.println(ps.endsMeet("abcdefg", 2));
       //Working//System.out.println(ps.middleMan("abcdefg"));
       //Working//System.out.println(ps.isCentered("abcdefg", "cde"));
-      //Systyem.out.println(ps.countMe());
+      //Working//System.out.println(ps.countMe("I am an example sentence", 'e'));
       //System.out.println(ps.triplets("aaabbbccc"));
       //System.out.println(ps.addMe("123 abc 123"));
       //System.out.println(ps.sequence());
@@ -125,10 +125,24 @@ public class ProblemSet5 {
      */
 
     public int countMe(String text, char suffix) {
-      if (text == null || Character.isAlphabetic(suffix)){
+      if (text == null || !Character.isAlphabetic(suffix)){
         return -1;
       }
-      return -1;
+
+      int count = 0;
+
+      for (int i = 0; i < text.length() -1; i++){
+        if (text.charAt(i + 1) == ' ' && text.charAt(i) == suffix){
+          count++;
+        }
+      }
+
+      if (text.charAt(text.length() -1) == suffix){
+        count ++;
+      }
+
+      return count;
+
    }
 
     /*
@@ -142,9 +156,8 @@ public class ProblemSet5 {
         return -1;
    }
 
-
    return -1;
- }
+     }
 
     /*
      * Exercise 7.
@@ -156,8 +169,11 @@ public class ProblemSet5 {
        if (text == null){
          return -1;
        }
-       return -1;
+
+      return -1;
+
     }
+
 
     /*
      * Exercise 8.
