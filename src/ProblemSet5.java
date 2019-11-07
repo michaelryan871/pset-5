@@ -23,16 +23,16 @@ public class ProblemSet5 {
 
       // comment out or uncomment as needed
 
-      //Working//System.out.println(ps.surroundMe("cde", "abfg"));
-      //Working//System.out.println(ps.endsMeet("abcdefg", 2));
-      //Working//System.out.println(ps.middleMan("abcdefg"));
-      //Working//System.out.println(ps.isCentered("abcdefg", "cde"));
-      //Working//System.out.println(ps.countMe("I am an example sentence", 'e'));
-      //Working//System.out.println(ps.triplets("aaabbbccc"));
-      //Working//System.out.println(ps.addMe("123 abc 123"));
+      System.out.println(ps.surroundMe("cde", "abfg"));
+      System.out.println(ps.endsMeet("abcdefg", 2));
+      System.out.println(ps.middleMan("abcdefg"));
+      System.out.println(ps.isCentered("abcdefg", "cde"));
+      System.out.println(ps.countMe("I am an example sentence", 'e'));
+      System.out.println(ps.triplets("aaabbbccc"));
+      System.out.println(ps.addMe("123 abc 123"));
       System.out.println(ps.sequence("abbcccdddd"));
-      //Working//System.out.println(ps.intertwine("abc", "12345"));
-      //Working//System.out.println(ps.isPalindrome("racecar"));
+      System.out.println(ps.intertwine("abc", "12345"));
+      System.out.println(ps.isPalindrome("racecar"));
 
     }
 
@@ -204,7 +204,27 @@ public class ProblemSet5 {
       if (text == null){
         return -1;
       }
-      return -1;
+
+      long sequence = 1;
+      long sequenceLength = 1;
+      char pos1 = ' ';
+      char pos2 = ' ';
+      for (int i = 1; i < text.length(); i++){
+        pos1 = text.charAt(i - 1);
+        pos2 = text.charAt(i);
+        if (pos1 == pos2){
+          sequenceLength -= -1;
+          if (sequenceLength > sequence){
+            sequence = sequenceLength;
+          }
+        } else {
+          sequenceLength = 1;
+        }
+      }
+      if (pos1 == ' '){
+        sequence = 0;
+      }
+      return sequence;
    }
 
     /*
