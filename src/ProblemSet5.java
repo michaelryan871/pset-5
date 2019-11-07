@@ -27,12 +27,12 @@ public class ProblemSet5 {
       //Working//System.out.println(ps.endsMeet("abcdefg", 2));
       //Working//System.out.println(ps.middleMan("abcdefg"));
       //Working//System.out.println(ps.isCentered("abcdefg", "cde"));
-      //ps.countMe();
-      /*In Progress*/System.out.println(ps.triplets(aaabbbccc));
+      //Systyem.out.println(ps.countMe());
+      /*In Progress*///System.out.println(ps.triplets("aaabbbccc"));
       //System.out.println(ps.addMe("123 abc 123"));
-      //ps.sequence();
-      //ps.intertwine();
-      //ps.isPalindrome();
+      //System.out.println(ps.sequence());
+      //System.out.println(ps.intertwine());
+      //Working//System.out.println(ps.isPalindrome("racecar"));
 
     }
 
@@ -192,12 +192,26 @@ public class ProblemSet5 {
      * Given a string, determine whether or not it is a palindrome.
      */
 
-    public boolean isPalindrome(String text) {
-      if (text == null){
-         boolean isPalindrome = false;
-         return isPalindrome;
-      }
-      boolean isPalindrome = true;
-      return isPalindrome;
+     public boolean isPalindrome(String text) {
+          boolean isPalindrome = false;
+           if (text == null){
+              isPalindrome = false;
+              return isPalindrome;
+           }
+
+           String reverse = "";
+
+           int length = text.length();
+
+           for (int i = length - 1; i >= 0; i--)
+             reverse = reverse + text.charAt(i);
+
+
+           if (text.equals(reverse)) {
+                   isPalindrome = true;
+     }
+
+     return isPalindrome;
+
    }
 }
