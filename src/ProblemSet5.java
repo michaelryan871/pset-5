@@ -28,7 +28,7 @@ public class ProblemSet5 {
       //Working//System.out.println(ps.middleMan("abcdefg"));
       //Working//System.out.println(ps.isCentered("abcdefg", "cde"));
       //Working//System.out.println(ps.countMe("I am an example sentence", 'e'));
-      System.out.println(ps.triplets("aaabbbccc"));
+      //Working//System.out.println(ps.triplets("aaabbbccc"));
       //Working//System.out.println(ps.addMe("123 abc 123"));
       System.out.println(ps.sequence("abbcccdddd"));
       //Working//System.out.println(ps.intertwine("abc", "12345"));
@@ -156,8 +156,20 @@ public class ProblemSet5 {
         return -1;
    }
 
-   return -1;
+   int triplet = 0;
+
+   for (int i = 0; i < text.length() - 2; i++){
+     char firstLetter = text.charAt(i);
+     char secondLetter = text.charAt(i + 1);
+     char thirdLetter = text.charAt(i + 2);
+     if (firstLetter == secondLetter && firstLetter == thirdLetter){
+       triplet++;
      }
+   }
+
+   return triplet;
+
+}
 
     /*
      * Exercise 7.
