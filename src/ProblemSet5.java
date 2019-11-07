@@ -85,8 +85,10 @@ public class ProblemSet5 {
         return text;
       }
 
+      int stringLength = text.length();
+      String middleText = text.substring(stringLength/2 - 1, stringLength/2 + 2);
 
-      return text;
+      return middleText;
  }
 
     /*
